@@ -1,4 +1,4 @@
-# Banana Bread Tracker 🧁
+# Banana Bread Tracker 🍌🍞
 
 My girlfriend and I recently started a small business baking and selling banana bread.
 
