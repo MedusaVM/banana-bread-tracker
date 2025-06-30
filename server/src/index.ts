@@ -1,5 +1,6 @@
 import express from "express";
 import cors from "cors";
+import helmet from "helmet";
 import dotenv from "dotenv";
 dotenv.config(); //All functions that may use .env variables should be imported after this method is called
 
@@ -18,6 +19,7 @@ app.use(
     allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
+app.use(helmet());
 app.use(express.json());
 
 app.get("/", (_req, res) => {
