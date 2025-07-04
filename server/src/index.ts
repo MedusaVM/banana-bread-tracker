@@ -23,8 +23,10 @@ app.use(helmet());
 app.use(express.json());
 
 app.get("/", (_req, res) => {
-  res.send("Banana Bread Tracker backend is running!");
+  res.status(200).send("Banana Bread Tracker backend is running!");
 });
+
+export default app; // Exports the app for testing
 
 const startServer = async () => {
   try {
@@ -35,4 +37,4 @@ const startServer = async () => {
   }
 };
 
-startServer();
+if (process.env.NODE_ENV !== "test") startServer(); //It only starts the server for development or production environments
